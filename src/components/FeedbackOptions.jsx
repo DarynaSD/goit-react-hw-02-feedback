@@ -1,16 +1,18 @@
 // кнопки; тупий компонент, який збирає дані і передає в Statistics
 // <FeedbackOptions options={} onLeaveFeedback={}>
 
+import { StyledBtnList, StyledButton, } from './Parts.styled'
+
 export default function FeedbackOptions({options, onLeaveFeedback}) {
     console.log(options)
     
      return (
-    <ul>
+    <StyledBtnList>
       {options.map(one => (
           <li key={one}>
-              <button type="button" id={ one } onClick={onLeaveFeedback}>{ one }</button>
+              <StyledButton type="button" variant={ one } onClick={onLeaveFeedback}>{ one }</StyledButton>
           </li>
       ))}
-    </ul>
+    </StyledBtnList>
   );
 }
