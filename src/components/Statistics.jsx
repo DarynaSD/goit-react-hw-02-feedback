@@ -1,16 +1,17 @@
 // <Statistics good={} neutral={} bad={} total={} positivePercentage={}>
+import { StyledFeedbackList } from './Parts.styled';
 
 export default function Statistics(props) {
   const { good, neutral, bad, total, positivePercentage } = props;
   
   return (
-    <ul>
+    <StyledFeedbackList>
         <li> good: {good} </li>
         <li> neutral: {neutral} </li>
         <li> bad: {bad} </li>
         <li> total: {total} </li>
-        <li> positive feedback: {positivePercentage}% </li>
-      </ul> 
+        <li id={positivePercentage}> positive feedback: {positivePercentage}% </li>
+      </StyledFeedbackList> 
   );
    
   

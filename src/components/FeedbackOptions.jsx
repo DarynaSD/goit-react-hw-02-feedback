@@ -3,14 +3,14 @@
 
 import { StyledBtnList, StyledButton, } from './Parts.styled'
 
-export default function FeedbackOptions({options, onLeaveFeedback}) {
+export default function FeedbackOptions({options, onLeaveFeedback,}) {
     console.log(options)
     
      return (
     <StyledBtnList>
       {options.map(one => (
           <li key={one}>
-              <StyledButton type="button" variant={ one } onClick={onLeaveFeedback}>{ one }</StyledButton>
+              <StyledButton type="button" id={one} onClick={onLeaveFeedback}>{ one }</StyledButton>
           </li>
       ))}
     </StyledBtnList>
