@@ -4,7 +4,7 @@
 import { StyledBtnList, StyledButton, } from './Parts.styled'
 
 export default function FeedbackOptions({options, onLeaveFeedback,}) {
-    console.log(options)
+    //console.log(options)
     
      return (
     <StyledBtnList>

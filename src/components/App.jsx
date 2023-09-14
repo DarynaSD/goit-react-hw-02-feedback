@@ -16,11 +16,13 @@ class App extends Component {
   // а id button це і є ключ
   onLeaveFeedback = (e) => {
     const queryToRenew = e.target.id;
-    console.log(queryToRenew);
+    //console.log(queryToRenew);
     this.setState((prev) => ({ [queryToRenew]: prev[queryToRenew] + 1 }))
   };
 
-  countTotalFeedback = () => this.state.good + this.state.neutral + this.state.bad;
+  //countTotalFeedback = () => this.state.good + this.state.neutral + this.state.bad;
+  countTotalFeedback = () => Object.values(this.state).reduce((prev, el) => prev + el);
+
 
   countPositiveFeedbackPercentage = () =>
     Math.round(

@@ -3,7 +3,7 @@
 import {StyledSection} from './Parts.styled'
 
 export default function Section({ title, children }) {
-    console.log(children)
+    //console.log(children)
     return (
         <StyledSection>
             <h2>{title}</h2>
